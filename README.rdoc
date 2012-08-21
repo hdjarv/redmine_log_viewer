@@ -1,12 +1,19 @@
-= Redmine Logs Plugin
+= Redmine Log Viewer Plugin
 
-This is a plugin for Redmine which lets you download log files of Redmine from administration page.
+This is a plugin for Redmine which lets you view application log files from 
+within the administration interface.
 
-http://www.r-labs.org/projects/logs
+This is based on the Redmine logs plugin by Haruyuki Iida. Many thanks for the 
+original work.
+
+=== Prerequisites
+
+You need to have the simplecov & simplecov-rcov gems installed.
 
 === Plugin installation
 
-1. Copy the plugin directory into the vendor/plugins directory.
-
-That's all.
+1. Copy this directory into the plugins directory in Redmine (it must be 
+   named redmine_log_viewer).
+2. Done. After restarting Redmine, you will now have an entry name Logs 
+   on the adminsitration page menu.
 

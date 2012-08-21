@@ -22,4 +22,4 @@
     height: 600px;
 }
 
-#admin-menu a.redmine-logs { background-image: url(../images/log.png); }
+#admin-menu a.redmine-log-viewer { background-image: url(../images/log.png); }

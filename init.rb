@@ -1,4 +1,5 @@
-# Logs plugin for Redmine
+# Log viewer plugin for Redmine
+# Copyright (c) 2012 Henrik Djärv
 # Copyright (C) 2010  Haruyuki Iida
 #
 # This program is free software; you can redistribute it and/or
@@ -17,14 +18,12 @@
 require 'redmine'
 require 'admin_menu_hooks'
 
-Redmine::Plugin.register :redmine_logs do
-  name 'Redmine Logs plugin'
-  author 'Haruyuki Iida'
-  author_url 'http://twitter.com/haru_iida'
-  url "http://www.r-labs.org/projects/logs" if respond_to?(:url)
-  description 'This is a Logs plugin for Redmine'
-  version '0.0.4'
+Redmine::Plugin.register :redmine_log_viewer do
+  name 'Redmine Log Viewer plugin'
+  author 'Henrik Djärv, Haruyuki Iida'
+  description 'View Redmine application log files from within the administration interface.'
+  version '0.1'
   requires_redmine :version_or_higher => '2.0.0'
   
-  menu :admin_menu, :redmine_logs, { :controller => 'logs', :action => 'index'}, :caption => :logs
+  menu :admin_menu, :redmine_log_viewer, { :controller => 'logs', :action => 'index'}, :caption => :logs
 end
