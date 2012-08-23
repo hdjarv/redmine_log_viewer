@@ -44,7 +44,7 @@ class LogsController < ApplicationController
 
   def delete
     begin
-      File.delete(params[:path])
+      # File.delete(params[:path]) disable actual file deletion
       redirect_to :action => "index"
     rescue => e
       @error = e
