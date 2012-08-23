@@ -1,4 +1,5 @@
-# Logs plugin for Redmine
+# Log viewer plugin for Redmine
+# Copyright (C) 2012 Henrik Djärv
 # Copyright (C) 2010  Haruyuki Iida
 #
 # This program is free software; you can redistribute it and/or
@@ -58,7 +59,7 @@ class LogsController < ApplicationController
   def log_list(path)
     logs = []
     Dir::foreach(path) do |v|
-      next if v.start_with?('.') #exlude special path (. and ..) and hidden directories
+      next if not /^\w+\.log(\.\d+)?$/.match(v) # Only list the log files in the directory
       if path =~ /\/$/
         v = path + v
       else
