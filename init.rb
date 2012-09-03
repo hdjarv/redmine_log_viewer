@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # Log viewer plugin for Redmine
 # Copyright (c) 2012 Henrik Djärv
 # Copyright (C) 2010  Haruyuki Iida
