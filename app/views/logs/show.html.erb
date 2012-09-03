@@ -1,5 +1,6 @@
 <%
 # Logs plugin for Redmine
+# Copyright (C) 2012 Henrik Djärv
 # Copyright (C) 2011  Haruyuki Iida
 #
 # This program is free software; you can redistribute it and/or
@@ -24,7 +25,7 @@
 <div class="contextual">
   <span class="icon icon-save">
     <% form_id = "download_id_#{rand(10000)}" -%>
-    <%form_tag({:action => 'download'}, {:id => form_id}) do%>
+    <%  form_tag({:action => 'download'}, {:id => form_id}) do%>
       <%= hidden_field_tag :path, @path %>
       <%= link_to_function l(:button_download),  "$('#{form_id}').submit()"%>
     <% end -%>
@@ -38,5 +39,5 @@
 </div>
 
 <% content_for :header_tags do %>
-   <%= stylesheet_link_tag "logs.css", :plugin => "redmine_logs", :media => "screen" %>
+   <%= stylesheet_link_tag "logs.css", :plugin => "redmine_log_viewer", :media => "screen" %>
 <% end %>
