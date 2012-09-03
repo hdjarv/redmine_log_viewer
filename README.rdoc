@@ -15,5 +15,5 @@ You need to have the simplecov & simplecov-rcov gems installed.
 1. Copy this directory into the plugins directory in Redmine (it must be 
    named redmine_log_viewer).
 2. Done. After restarting Redmine, you will now have an entry name Logs 
-   on the adminsitration page menu.
+   on the administration page menu.
 
