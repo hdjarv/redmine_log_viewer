@@ -22,15 +22,6 @@
   <div class="flash error"><%= @error -%></div>
 <% end -%>
 
-<div class="contextual">
-  <span class="icon icon-save">
-    <% form_id = "download_id_#{rand(10000)}" -%>
-    <%  form_tag({:action => 'download'}, {:id => form_id}) do%>
-      <%= hidden_field_tag :path, @path %>
-      <%= link_to_function l(:button_download),  "$('#{form_id}').submit()"%>
-    <% end -%>
-  </span>
-</div>
 <h2>Log: <%= h(@path) %> </h2>
 <div id="redmine_log_show">
   <pre>
